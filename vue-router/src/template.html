@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div id="app">
+	 <ul>
+ 	<li><router-link to="/">Home</router-link></li>
+ 	<li><router-link to="/user">User</router-link></li>
+ 	<li><router-link to="/article">Article</router-link></li>
+    </ul>
+	 <transition name="fade" mode="out-in">
+	 <keep-alive>
+		<router-view></router-view>
+	 </keep-alive>
+	  </transition>
+	  <p v-if="loading">loading</p>
+	</div>
+	<!--[if IE]>
+    <script src="https://cdn.bootcss.com/es6-promise/4.1.1/es6-promise.js"></script>
+	<script>
+	  window.Promise = ES6Promise;
+	</script>
+    <![endif]-->
+  </body>
+</html>
